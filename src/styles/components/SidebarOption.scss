@@ -1,0 +1,23 @@
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .sidebarOption:hover {
+    background-color: #feefe8;
+    color: $chirp-color;
+    transition: color 100ms ease-out;
+  }
+  .sidebarOption > .MuiSvgIcon-root {
+    padding: 20px;
+  }
+  .sidebarOption > h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  .sidebarOption--active {
+    color: $chirp-color;
+  }

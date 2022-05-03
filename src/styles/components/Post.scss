@@ -1,0 +1,41 @@
+.post{
+
+.postbody > img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  .post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $chirp-background;
+  }
+  .postfooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .postbadge {
+    font-size: 14px !important;
+    color: $chirp-color;
+  }
+  .postheaderSpecial {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+  }
+  .postheaderText > h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .postheaderDescription {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .postbody {
+    flex: 1;
+    padding: 10px;
+  }
+  .postavatar {
+    padding: 20px;
+  }
+}

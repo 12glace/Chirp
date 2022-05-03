@@ -1,0 +1,27 @@
+.chirpIcon {
+  color: $chirp-color;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 30px !important;
+}
+.chirp {
+  background-color: $chirp-color !important;
+  border-radius: 20px;
+  height: 50px;
+  margin-top: 20px !important;
+  border: none !important;
+  color: white !important;
+  button{
+    border-radius: 20px !important;
+  }
+}
+.sidebar {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 250px;
+  border-right: 1px solid $chirp-color;
+}
+.link{
+  color: black !important;
+}

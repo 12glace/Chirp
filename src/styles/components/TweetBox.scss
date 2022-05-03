@@ -1,0 +1,33 @@
+.tweetBox {
+  padding-bottom: 10px;
+  border-bottom: 4px solid $chirp-background;
+  padding-right: 10px;
+  min-width: 600px;
+}
+.tweetBoxinput {
+  display: flex;
+  padding: 20px;
+}
+.tweetBoxinput > input {
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  min-width: 600px;
+}
+.tweetBoxinput > input:focus {
+  outline: none;
+}
+.tweetBoxbutton {
+  position: absolute;
+  left: 350px;
+  background-color: $chirp-color !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 700 !important;
+  border-radius: 20px !important;
+  height: 45px !important;
+}  
+.tweetBoximageInput {
+  border: none;
+  padding: 15px;
+}
