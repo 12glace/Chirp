@@ -3,20 +3,20 @@ import TweetBox  from './TweetBox';
 import { Navigate } from "react-router-dom";
 import { useContext } from 'react';
 import { authentication } from '../Firebase/firebase';
-import { TwitterAuthProvider, signInWithPopup } from 'firebase/auth';
+//import { TwitterAuthProvider, signInWithPopup } from 'firebase/auth';
 import Post from "./Post";
 import { Button } from "@material-ui/core";
 const Home = () => {
-    const signIn = () => {
-        const provider = new TwitterAuthProvider();
-        signInWithPopup(authentication, provider)
-        .then((result) => {
-            console.log(result);
-            })
-            .catch((error) => {
-                console.log(error);
-                });
-    };
+    // const signIn = () => {
+    //     const provider = new TwitterAuthProvider();
+    //     signInWithPopup(authentication, provider)
+    //     .then((result) => {
+    //         console.log(result);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //             });
+    // };
     console.log('test');
     return(
         <div>
@@ -35,7 +35,7 @@ const Home = () => {
           />
         ))} */}
       </div>
-            <Button onClick={signIn}>Sign in with Twitter</Button>
+            {/* <Button onClick={signIn}>Sign in with Twitter</Button> */}
             <TweetBox />
         </div>
     )
