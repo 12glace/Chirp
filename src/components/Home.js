@@ -3,7 +3,7 @@ import TweetBox  from './TweetBox';
 import { Navigate } from "react-router-dom";
 import { useContext } from 'react';
 import { authentication } from '../Firebase/firebase';
-//import { TwitterAuthProvider, signInWithPopup } from 'firebase/auth';
+import { TwitterAuthProvider, signInWithPopup } from 'firebase/auth';
 import Post from "./Post";
 import { Button } from "@material-ui/core";
 import { useSelector, useDispatch } from 'react-redux';
@@ -11,16 +11,16 @@ import { setHome } from '../redux/actions/tweetActions';
 
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 const Home = () => {
-    // const signIn = () => {
-    //     const provider = new TwitterAuthProvider();
-    //     signInWithPopup(authentication, provider)
-    //     .then((result) => {
-    //         console.log(result);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //             });
-    // };
+    const signIn = () => {
+        const provider = new TwitterAuthProvider();
+        signInWithPopup(authentication, provider)
+        .then((result) => {
+            console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+                });
+    };
 
     const store = useSelector(state => state);
     const dispatch = useDispatch();
@@ -63,23 +63,16 @@ if (store.allReducers.home.search===undefined) {
   
 }
     return(
-        <div>
-          
-             <div className="feed">
+      
+      <div className="feed">
+        <Button onClick={signIn}>Sign In</Button>
         <div className="feed__header">
           <h2>Home</h2>
-
           <TweetBox/>
+          {post}
         </div>
-        {
-        post
-         //console.log(store.allReducers.home.search)
-        }
       </div>
-            { 
-            /* <Button onClick={signIn}>Sign in with Twitter</Button> */}
-            
-        </div>
+
     )
 }
 
