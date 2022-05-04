@@ -5,10 +5,16 @@ export const setSearchTweet = (search) => {
         payload: search
     }
 }
-
-export const searchUser = (search) => {
+export const setHome = (search) => {
     return {
-        type: TweetTypes.SEARCH_USER,
+        type: TweetTypes.HOME,
         payload: search
     }
 }
+
+// export const searchUser = (search) => {
+//     return {
+//         type: TweetTypes.SEARCH_USER,
+//         payload: search
+//     }
+// }

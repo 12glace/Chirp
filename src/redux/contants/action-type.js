@@ -5,4 +5,5 @@ export const TweetTypes = {
     SET_TWEET_LIKES: 'SET_TWEET_LIKES',
     SET_TWEET_RETWEETS: 'SET_TWEET_RETWEETS',
     SEARCH_USER: 'SEARCH_USER',
+    HOME:'HOME',
 }
