@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setSearchTweet } from '../redux/actions/tweetActions';
 import Post from './Post';
 import { Button } from '@material-ui/core';
+import { Search } from '@material-ui/icons';
 
 
 const Explore = () => {   
@@ -24,53 +25,38 @@ const Explore = () => {
     };
     
     const search =  () => {
-        // console.log("test");     
-        // const response =  axios
-        //     .request(options)
-        //     .catch(function (error) {
-        //         console.error(error);
-        //     }).then(console.log(response))
 
         const axios = require("axios");
         axios.request(options).then(function (response) {
-            dispatch(setSearchTweet(response));
-            //console.log(response);
+            dispatch(setSearchTweet(response.data));
+            console.log(response.data);
         }).catch(function (error) {
             console.error(error);
-        });
-                   
+        });         
     }
-  
-
-    // const axios = require("axios");
-    // axios.request(global.config.options).then(function (response) {
-    //     console.log(response.data);
-    // }).catch(function (error) {
-    //     console.error(error);
-    // });
 
     return (
         <div className="feed">
         <div className="feed__header">
           <h2>Explore</h2>
         </div>
-        <button onClick={search}>Search</button>
-
+        <Search></Search>
+        <input></input>
+        <Button onClick={search}>Search</Button>
         {
-            // store.allReducers.search.globalObjects.tweets
-         
-            //store?.allReducers.search.globalObjects.tweet || "Not loaded yet"
-        /* {Object.entries(store.allReducers.search.globalObjects.tweets).map((post) => (
-          <Post
-            displayName={post.displayName}
-            username = {console.log(store)
-            }
-            verified={post.verified}
-            text={post[1].full_text}
-            avatar={post.avatar}
-            image={post.image}
-          />
-        ))} */}
+
+        //   Object.entries(store.allReducers.search.globalObjects.tweets).map((post) => (
+        //   <Post
+        //     displayName={post.displayName}
+        //     username = {console.log(store)
+        //     }
+        //     verified={post.verified}
+        //     text={post[1].full_text}
+        //     avatar={post.avatar}
+        //     image={post.image}
+        //   />
+        // ))
+      }
       </div>
     );
 };
