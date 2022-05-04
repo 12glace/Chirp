@@ -12,7 +12,7 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
     return (
         <div className="post">
       <div className="postavatar">
-        <Avatar src={avatar} />
+        <Avatar src={avatar.toString().replace(/,/g, '') }/>
       </div>
       <div className="postbody">
         <div className="postheader">
