@@ -8,6 +8,7 @@ import Sidebar from "./components/Sidebar";
 import Bookmarks from "./components/Bookmarks";
 import Notifications from "./components/Notifications";
 import List from "./components/List";
+import RightSidebar from "./components/RightSidebar";
 const App = () => {
     return(
        <div className="app">
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/notifications" element={<Notifications/>}/>
                     <Route path="/lists" element={<List/>}/>
                 </Routes>
+                <RightSidebar/>
             </BrowserRouter>
         </div>
     )
