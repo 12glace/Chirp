@@ -6,7 +6,8 @@ Changes that have been done to this project will be documented in this file (I w
 - Email : test@test.com
 - Password : testtest
 
-## [1.0.0] - 2012-05-01
+## [1.0.0] - 01-05-2022
+
 ### Added
 - Following Components added:
     - Bookmarks.
