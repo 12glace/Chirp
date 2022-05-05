@@ -5,11 +5,10 @@ const RightSidebar = () => {
     return (
         <div className='rightsidebar'>
             <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="elonmusk"
-          options={{height: 1000}}
-        />
-     
+            sourceType="profile"
+            screenName="elonmusk"
+            options={{height: 1000}}
+            />
         </div>
     );
 };
