@@ -45,7 +45,7 @@ if (store.allReducers.home.search===undefined) {
       username={Object.entries(store.allReducers.home.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].screen_name : null))}
       verified={Object.entries(store.allReducers.home.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].verified : user[1].verified))}
       text={post[1].full_text}
-      avatar={Object.entries(store.allReducers.home.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].profile_image_url:""))}
+      avatar={Object.entries(store.allReducers.home.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].profile_image_url_https:""))}
       image={post.image}
     />
   ))
