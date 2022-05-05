@@ -1,5 +1,5 @@
 # Changelog
-Changes that have been done to this project will be documented in this file (I will do my best)\
+Changes that have been done to this project will be documented in this file (I will do my best)
 
 # Demo site created
 - https://chirp-alpha.douglas-barlow.com/
@@ -8,42 +8,42 @@ Changes that have been done to this project will be documented in this file (I w
 
 ## [1.0.0] - 2012-05-01
 ### Added
-- Following Components added:\
-    - Bookmarks.\
-    - Explore.\
-    - Home.\
-    - Profile.\
-    - List.\
-    - LoginPage.\
-    - Notifications.\
-    - Post.\
-    - Private.\
-    - RightSideBar.\
-    - SideBar.\
-    - SideBarOptions.\
-    - TweetBox.\
-    - Messages.\
-- Explore fully functional :3\
-    - Search bar functional\
-- Home fully functional\
-- SideBar/routes fully functional \
-- Right"SideBar" functional\
-- Redux is added\
+- Following Components added:
+    - Bookmarks.
+    - Explore.
+    - Home.
+    - Profile.
+    - List.
+    - LoginPage.
+    - Notifications.
+    - Post.
+    - Private.
+    - RightSideBar.
+    - SideBar.
+    - SideBarOptions.
+    - TweetBox.
+    - Messages.
+- Explore fully functional :3
+    - Search bar functional
+- Home fully functional
+- SideBar/routes fully functional 
+- Right"SideBar" functional
+- Redux is added
 
 ### Known Issues
-- Problem with vercel with firebase\
-- Cannot send tweets, need elevated privileges from twitter\
+- Problem with vercel with firebase
+- Cannot send tweets, need elevated privileges from twitter
 
 ### Things to do
-- Everything\
-- Pray to Elon, the god of twitter\
+- Everything
+- Pray to Elon, the god of twitter
 
 ### Notes
-- why is this a thing?\
-- who am i?\
-- what is this?\
-- who are you?\
-- the world is flat and we are all in it\
-- will someone ever find out?\
-- will somone actually read this?\
-- will shall never know\
+- why is this a thing?
+- who am i?
+- what is this?
+- who are you?
+- the world is flat and we are all in it
+- will someone ever find out?
+- will somone actually read this?
+- will shall never know
