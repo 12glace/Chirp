@@ -7,6 +7,7 @@ Changes that have been done to this project will be documented in this file (I w
 - Password : testtest
 
 ## [1.0.0] - 01-05-2022
+
 ### Added
 - Following Components added:
     - Bookmarks.
