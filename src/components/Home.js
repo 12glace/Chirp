@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import TweetBox  from './TweetBox';
 import { Navigate } from "react-router-dom";
 import { useContext } from 'react';
-import { authentication } from '../Firebase/firebase';
 import { TwitterAuthProvider, signInWithPopup } from 'firebase/auth';
 import Post from "./Post";
 import { Button } from "@material-ui/core";
@@ -11,16 +10,6 @@ import { setHome } from '../redux/actions/tweetActions';
 
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 const Home = () => {
-    const signIn = () => {
-        const provider = new TwitterAuthProvider();
-        signInWithPopup(authentication, provider)
-        .then((result) => {
-            console.log(result);
-            })
-            .catch((error) => {
-                console.log(error);
-                });
-    };
 
     const store = useSelector(state => state);
     const dispatch = useDispatch();
@@ -65,7 +54,6 @@ if (store.allReducers.home.search===undefined) {
     return(
       
       <div className="feed">
-        <Button onClick={signIn}>Sign In</Button>
         <div className="feed__header">
           <h2>Home</h2>
           <TweetBox/>
