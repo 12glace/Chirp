@@ -17,15 +17,32 @@ const Explore = () => {
     const options = {
         method: 'GET',
         url: 'https://twitter135.p.rapidapi.com/Search/',
-        params: {q: 'Dogecoin', count: '20'},
+        params: {q: 'Elon Musk', count: '20'},
         headers: {
           'X-RapidAPI-Host': 'twitter135.p.rapidapi.com',
           'X-RapidAPI-Key': '63ba1ff21fmshe6a53ea2221dbdap1eb2afjsn723d6f406406'
         }
     };
     
+    
+var post;
+if (store.allReducers.search.search.globalObjects===undefined) {
+  post = " Please enter a search term";
+} else {
+  console.log(store.allReducers)
+  post = Object.entries(store.allReducers.search.search.globalObjects.tweets).map((post) => (
+    <Post
+      displayName={Object.entries(store.allReducers.search.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].name : null))}
+      username={Object.entries(store.allReducers.search.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].screen_name : null))}
+      verified={Object.entries(store.allReducers.search.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].verified : user[1].verified))}
+      text={post[1].full_text}
+      avatar={Object.entries(store.allReducers.search.search.globalObjects.users).map((user) => (user[1].id_str == post[1].user_id_str ? user[1].profile_image_url:""))}
+      image={post.image}
+    />
+  ))
+  
+}
     const search =  () => {
-
         const axios = require("axios");
         axios.request(options).then(function (response) {
             dispatch(setSearchTweet(response.data));
@@ -36,27 +53,16 @@ const Explore = () => {
     }
 
     return (
-        <div className="feed">
+        <div className="timeline">
         <div className="feed__header">
           <h2>Explore</h2>
         </div>
         <Search></Search>
-        <input></input>
+        <input value="Elon Musk"></input>
         <Button onClick={search}>Search</Button>
-        {
-
-        //   Object.entries(store.allReducers.search.globalObjects.tweets).map((post) => (
-        //   <Post
-        //     displayName={post.displayName}
-        //     username = {console.log(store)
-        //     }
-        //     verified={post.verified}
-        //     text={post[1].full_text}
-        //     avatar={post.avatar}
-        //     image={post.image}
-        //   />
-        // ))
-      }
+        <br/>
+        {post}
+      
       </div>
     );
 };
