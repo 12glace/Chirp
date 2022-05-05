@@ -3,7 +3,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const RightSidebar = () => {
     return (
-        <div className='leftsidebar'>
+        <div className='rightsidebar'>
             <TwitterTimelineEmbed
           sourceType="profile"
           screenName="elonmusk"
