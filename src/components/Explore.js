@@ -16,8 +16,8 @@ const Explore = () => {
 
     const options = {
       method: 'GET',
-      url: 'https://twitter135.p.rapidapi.com/AutoComplete/',
-      params: {q: 'Elon'},
+      url: 'https://twitter135.p.rapidapi.com/Search/',
+      params: {q: 'Elon Musk', count: '20'},
       headers: {
         'X-RapidAPI-Host': 'twitter135.p.rapidapi.com',
         'X-RapidAPI-Key': '359e3ae211msha8a0227b6ad7584p12c49cjsne4440c64e851'
