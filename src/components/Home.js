@@ -16,11 +16,11 @@ const Home = () => {
 
     const options = {
       method: 'GET',
-      url: 'https://twitter135.p.rapidapi.com/Search/',
-      params: {q: 'Hello', count: '20'},
+      url: 'https://twitter135.p.rapidapi.com/AutoComplete/',
+      params: {q: 'Elon'},
       headers: {
         'X-RapidAPI-Host': 'twitter135.p.rapidapi.com',
-        'X-RapidAPI-Key': '63ba1ff21fmshe6a53ea2221dbdap1eb2afjsn723d6f406406'
+        'X-RapidAPI-Key': '359e3ae211msha8a0227b6ad7584p12c49cjsne4440c64e851'
       }
     };
    
